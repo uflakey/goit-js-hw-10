@@ -6,8 +6,8 @@ axios.defaults.headers.common['x-api-key'] =
 axios.defaults.baseURL = 'https://api.thecatapi.com/v1';
 
 export function fetchBreeds() {
-  return axios.get('/breeds').then(respons => {
-    return respons.data;
+  return axios.get('/breeds').then(resp => {
+    return resp.data;
   });
 }
 

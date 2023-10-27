@@ -1,5 +1,4 @@
-import { fetchBreeds } from './cat-api';
-import { fetchCatByBreed } from './cat-api';
+import { fetchBreeds, fetchCatByBreed } from './js/cat-api';
 
 import Notiflix from 'notiflix';
 import 'notiflix/dist/notiflix-3.2.6.min.css';
@@ -11,6 +10,5 @@ const loader = document.querySelector('.loader');
 const error = document.querySelector('.error');
 const catInfo = document.querySelector('.cat-info');
 
-console.log(fetchBreeds);
-console.log(fetchCatByBreed);
-console.log(respons.data);
+fetchBreeds().then(resp => console.log(resp));
+fetchCatByBreed().then(resp => console.log(resp));
