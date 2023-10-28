@@ -8,7 +8,7 @@ import 'slim-select/dist/slimselect.css';
 const { catInfoBox, select, loader } = refs;
 
 fetchBreeds()
-  .then(createMarcup)
+  .then(resp => createMarcup(resp))
   .catch(error =>
     Notiflix.Notify.failure(
       `Oops! Something went wrong! Try reloading the page!`
@@ -36,4 +36,9 @@ function onBreedSelect(event) {
       )
     )
     .finally(() => loader.classList.add('hiden'));
+}
+function showError(textErr) {
+  Notiflix.Notify.failure(
+    `Oops! Something went wrong! Try reloading the page!`
+  );
 }
