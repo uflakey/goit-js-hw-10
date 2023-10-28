@@ -1,0 +1,4 @@
+.loader.hiden {
+  opacity: 0;
+  pointer-events: none;
+}
